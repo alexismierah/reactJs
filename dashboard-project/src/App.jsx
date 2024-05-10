@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, RouteElement } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
@@ -15,11 +15,11 @@ const App = () => {
         <div className="flex flex-col w-full">
           <Header />
           <main className="p-4">
-            <Switch>
-              <Route path="/admin" component={Admin} />
-              <Route path="/students" component={Students} />
-              <Route path="/dashboard" component={Dashboard} />
-            </Switch>
+            <Routes>
+              <Route path="/admin" element={<Admin />} />
+              <Route path="/students" element={<Students />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+            </Routes>
           </main>
           <Footer />
         </div>
