@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, RouteElement } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
@@ -16,13 +16,13 @@ const App = () => {
           <Header />
           <main className="p-4">
             <Routes>
-              <Route path="/admin" element={<Admin />} />
-              <Route path="/students" element={<Students />} />
-              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/admin" element={<Admin />} key="admin-route" />
+              <Route path="/students" element={<Students />} key="students-route" />
+              <Route path="/dashboard" element={<Dashboard />} key="dashboard-route" />
             </Routes>
           </main>
-          <Footer />
         </div>
+        <Footer />
       </div>
     </Router>
   );
