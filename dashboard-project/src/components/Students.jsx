@@ -23,7 +23,6 @@ export class Dashboard extends Component {
                 <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">Science</td>
                 <td className="px-6 py-4 whitespace-no-wrap border-b border-gray-200">Active</td>
               </tr>
-              {/* Add more courses here */}
             </tbody>
           </table>
           <h1 className="text-3xl font-bold mt-8 mb-4">Upcoming Assignments</h1>
@@ -40,7 +39,6 @@ export class Dashboard extends Component {
                 <p className="text-sm text-gray-500">Due Date: May 20th, 2024</p>
               </div>
             </div>
-            {/* Add more assignments here */}
           </div>
         </div>
       </main>

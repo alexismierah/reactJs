@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 class Dashboard extends Component {
   render() {
-    // Mocked data for updates
     const updates = [
       { title: 'School Event', description: 'Join us for the annual sports day on May 15th.', date: '2024-05-10' },
       { title: 'Exam Schedule', description: 'Final exam schedule has been posted. Check your email for details.', date: '2024-05-09' },
