@@ -1,19 +1,29 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-export class Dashboard extends Component {
+class Dashboard extends Component {
   render() {
+    // Mocked data for updates
+    const updates = [
+      { title: 'School Event', description: 'Join us for the annual sports day on May 15th.', date: '2024-05-10' },
+      { title: 'Exam Schedule', description: 'Final exam schedule has been posted. Check your email for details.', date: '2024-05-09' },
+      { title: 'Holiday Notice', description: 'School will remain closed on May 20th for Memorial Day.', date: '2024-05-08' }
+    ];
+
     return (
-        <main className="flex-1 bg-gray-100 p-8">
-            <h2 className="text-2xl font-semibold mb-4"></h2>
-            <div className="container mx-auto">
-              <h1 className="text-3xl font-bold mb-4"></h1>
-              <table className="min-w-full">
-      
-              </table>
+      <main className="flex-1 bg-gray-100 p-8">
+        <h2 className="text-2xl font-semibold mb-4">School Updates</h2>
+        <div className="container mx-auto">
+          {updates.map((update, index) => (
+            <div key={index} className="border border-gray-300 rounded-md p-4 mb-4">
+              <h3 className="text-xl font-semibold mb-2">{update.title}</h3>
+              <p className="text-gray-600 mb-2">{update.description}</p>
+              <p className="text-sm text-gray-400">{new Date(update.date).toLocaleDateString()}</p>
             </div>
-        </main>
-    )
+          ))}
+        </div>
+      </main>
+    );
   }
 }
 
-export default Dashboard
+export default Dashboard;
